@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Computer Science lessons, digital skills training, web and software development, project guidance, and custom software solutions.">
+<title>Tech Skills & Solutions | Learn • Build • Achieve</title>
+<style>
+:root{--navy:#101b3d;--blue:#3157d5;--cyan:#27c3d5;--ink:#18233b;--muted:#667085;--paper:#f6f8fc;--white:#fff;--line:#e4e9f3;--gold:#ffbf47}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(1140px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;color:var(--navy);letter-spacing:-.4px}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font-size:21px;box-shadow:0 8px 20px #3157d533}.brand small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:700}
+nav{display:flex;align-items:center;gap:24px}nav a{font-size:14px;font-weight:700;color:#47516a}nav a:hover,nav a.active{color:var(--blue)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;background:var(--blue);color:white;font-weight:800;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #3157d533}.menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:22px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 25%,#3157d533,transparent 28%),linear-gradient(135deg,#0e1938,#172d62 58%,#145b83);color:#fff;padding:86px 0 90px}.hero:after{content:"</>";position:absolute;right:5%;bottom:-65px;font-size:clamp(180px,25vw,340px);font-weight:900;color:#ffffff09;letter-spacing:-20px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff38;border-radius:99px;padding:7px 13px;color:#dbe8ff;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}.dot{width:8px;height:8px;background:#65f0ca;border-radius:50%;box-shadow:0 0 0 5px #65f0ca22}
+h1{font-size:clamp(38px,5.2vw,66px);line-height:1.04;letter-spacing:-2.4px;margin:22px 0}.gradient-text{background:linear-gradient(90deg,#72e8ee,#b7c8ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:610px;color:#d5def4;font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn.light{background:#fff;color:var(--navy)}.btn.outline{background:transparent;border:1px solid #ffffff66;color:#fff}.hero-note{font-size:12px!important;color:#b9c9e8!important;margin-top:17px}
+.hero-visual{position:relative;min-height:340px;display:grid;place-items:center}.screen{width:min(100%,400px);padding:15px;border-radius:22px;background:#ffffff12;border:1px solid #ffffff2b;box-shadow:0 25px 70px #0004;transform:rotate(2deg)}.screen-top{display:flex;gap:6px;padding:2px 3px 14px}.screen-top i{width:8px;height:8px;border-radius:50%;background:#ff8585}.screen-top i:nth-child(2){background:#ffd36a}.screen-top i:nth-child(3){background:#69e2b1}.screen-content{background:#f8faff;color:var(--navy);border-radius:13px;padding:22px}.screen-label{font-size:11px;letter-spacing:1px;color:var(--blue);font-weight:900}.screen-content h3{font-size:24px;line-height:1.2;margin:8px 0}.code-lines{background:#101b3d;border-radius:10px;padding:14px;color:#a6f1e1;font:12px/2.1 Consolas,monospace;margin-top:18px}.float-card{position:absolute;right:-1px;bottom:14px;background:#fff;color:var(--ink);border-radius:15px;padding:13px 17px;box-shadow:0 12px 35px #0003;font-size:13px;font-weight:800}.float-card span{display:block;color:var(--muted);font-size:11px;font-weight:500}
+section{padding:82px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 38px}.kicker{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;letter-spacing:-1.1px;margin:10px 0 12px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}
+.services-section{background:var(--paper)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #12224a08;transition:transform .5s,opacity .5s,box-shadow .2s;opacity:0;transform:translateY(25px)}.service-card.in-view{opacity:1;transform:translateY(0)}.service-card:hover{box-shadow:0 15px 35px #12224a12;transform:translateY(-5px)}.service-card img{width:100%;height:175px;object-fit:cover;background:#dce5fa}.service-body{padding:21px}.service-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#edf1ff;color:var(--blue);font-size:21px;margin-top:-42px;position:relative;border:4px solid white}.service-body h3{margin:12px 0 8px;color:var(--navy);font-size:19px}.service-body p{color:var(--muted);font-size:14px;margin:0 0 17px}.text-link{color:var(--blue);font-weight:850;font-size:13px;background:none;border:0;padding:0;cursor:pointer}.text-link:hover{text-decoration:underline}.price{display:inline-block;border-radius:8px;padding:5px 9px;background:#eafbf7;color:#087d68;font-weight:850;font-size:12px;margin-bottom:10px}
+.notice{display:flex;gap:13px;align-items:flex-start;border:1px solid #f1dfb8;background:#fff9eb;border-radius:14px;padding:16px 18px;color:#74551b;margin-top:26px;font-size:13px}.notice strong{color:#62440e}
+.project-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}.project-toolbar p{margin:0;color:var(--muted);font-size:13px}.project-controls{display:flex;gap:8px}.project-arrow{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:20px;cursor:pointer}.project-arrow:hover{background:#edf1ff;border-color:#cbd6ff}.projects-viewport{overflow:hidden;padding:3px 2px 14px}.projects-grid{display:flex;gap:20px;transition:transform .55s cubic-bezier(.2,.75,.25,1);will-change:transform}.project{flex:0 0 calc((100% - 40px)/3);min-width:0;border:1px solid var(--line);border-radius:18px;padding:23px;background:#fff;box-shadow:0 5px 20px #12224a08;transition:opacity .5s,transform .5s,box-shadow .2s}.project.in-view{animation:projectEnter .65s both}.project:hover{box-shadow:0 15px 35px #12224a12;transform:translateY(-4px)}@keyframes projectEnter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}.project-icon{width:50px;height:50px;border-radius:14px;background:#edf1ff;display:grid;place-items:center;font-size:25px}.project h3{margin:17px 0 7px;color:var(--navy)}.project p{color:var(--muted);font-size:14px}.tag{display:inline-block;background:#f0f3fa;color:#53617e;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:800;margin:0 5px 7px 0}.download-link{display:inline-flex;margin-top:10px;font-size:13px;font-weight:850;color:var(--blue);gap:8px;align-items:center}
+.about-section{background:var(--navy);color:#fff}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.about-art{border-radius:24px;min-height:300px;background:linear-gradient(140deg,#2847aa,#1eb8c9);display:grid;place-items:center;font-size:95px;box-shadow:inset 0 0 0 1px #ffffff25}.about-section .section-head{text-align:left;margin:0}.about-section .section-head h2{color:#fff}.about-section .section-head p{color:#c4d0ec}.about-points{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}.about-point{border:1px solid #ffffff22;border-radius:12px;padding:13px;font-size:13px;color:#e1e8f8}.about-point b{display:block;color:#80f0df;margin-bottom:3px}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px}.contact-info{background:var(--paper);border-radius:20px;padding:27px}.contact-info h3{margin-top:0;color:var(--navy)}.contact-item{display:flex;gap:12px;margin:20px 0;color:var(--muted);font-size:14px}.contact-item strong{display:block;color:var(--ink)}.contact-form{border:1px solid var(--line);border-radius:20px;padding:27px}.contact-form h3{margin-top:0;color:var(--navy)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:14px}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #dbe2ef;border-radius:10px;padding:12px;font:inherit;font-size:14px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #3157d51a}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin-top:12px}
+footer{background:#0a122a;color:#b6c2dd;padding:28px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}.footer-row strong{color:#fff}.social-link{color:#8de8ee;font-weight:800}
+.modal-backdrop{position:fixed;inset:0;background:#07112dcc;z-index:60;display:none;place-items:center;padding:20px}.modal-backdrop.open{display:grid}.modal{width:min(600px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;padding:28px;position:relative;box-shadow:0 30px 90px #0005}.modal h2{color:var(--navy);margin:0 35px 12px 0}.modal p,.modal li{color:var(--muted);font-size:14px}.modal-close{position:absolute;right:17px;top:14px;border:0;background:#edf1fa;border-radius:10px;width:36px;height:36px;font-size:22px;cursor:pointer}.modal .btn{margin-top:12px}
+@media(max-width:850px){nav{gap:13px}nav a{font-size:13px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-visual{min-height:280px}.service-grid{grid-template-columns:repeat(2,1fr)}.project{flex-basis:calc((100% - 20px)/2)}.about-art{min-height:220px}}
+@media(max-width:640px){.nav{min-height:68px}.menu-toggle{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 5px}.nav-cta{display:none}.hero{padding:58px 0}.hero-grid{gap:20px}h1{letter-spacing:-1.5px}.hero-visual{min-height:250px}.service-grid{grid-template-columns:1fr}.project{flex-basis:100%}.service-card img{height:195px}.form-row{grid-template-columns:1fr}.about-points{grid-template-columns:1fr}.footer-row{align-items:flex-start;flex-direction:column}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Tech Skills and Solutions home"><span class="brand-mark">⌘</span><span>TECH SKILLS<small>& SOLUTIONS</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" id="menuToggle">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch ↗</a>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Learn • Build • Achieve</span>
+      <h1>Turn your ideas into <span class="gradient-text">digital skills.</span></h1>
+      <p>Practical computer lessons, coding and software development guidance, and custom digital solutions—support designed around your goals.</p>
+      <div class="hero-actions"><a class="btn light" href="#services">Explore services <span>↘</span></a><a class="btn outline" href="https://wa.me/263782381710" target="_blank" rel="noopener">WhatsApp us ↗</a></div>
+      <p class="hero-note">Online and physical lessons available • Flexible learning support</p>
+    </div>
+    <div class="hero-visual" aria-label="Illustration of a coding workspace">
+      <div class="screen"><div class="screen-top"><i></i><i></i><i></i></div><div class="screen-content"><div class="screen-label">YOUR NEXT CHAPTER</div><h3>Learn a skill.<br>Build something real.</h3><div style="display:flex;gap:8px;margin-top:13px"><span class="tag">Computer Science</span><span class="tag">Development</span></div><div class="code-lines">&gt; learn();<br>&gt; practise();<br>&gt; build_your_future();<br><span style="color:#ffd36a">Success is a process_</span></div></div></div>
+      <div class="float-card">✦ Practical guidance<span>Beginner to advanced</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-head"><span class="kicker">What we do</span><h2>Skills and solutions for your next step</h2><p>Choose a service to learn more about what is included and how we can help.</p></div>
+    <div class="service-grid">
+      <article class="service-card"><img loading="lazy" src="imgs/kids1.png" alt="Learner studying at a laptop"><div class="service-body"><div class="service-icon">💻</div><h3>Computer Science Lessons</h3><span class="price">From $10 per month</span><p>Extra lessons, revision and guided practice for school and advanced learners.</p><button class="text-link" data-service="computer">Explore service →</button></div></article>
+      <article class="service-card"><img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Laptop showing a software development workspace"><div class="service-body"><div class="service-icon">⌨️</div><h3>Web & Software Development</h3><p>Build your understanding of coding, websites, applications and software concepts.</p><button class="text-link" data-service="development">Explore service →</button></div></article>
+      <article class="service-card"><img loading="lazy" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=900&q=80" alt="Code on a computer monitor"><div class="service-body"><div class="service-icon">📊</div><h3>Computer Literacy & Digital Skills</h3><span class="price">$10 per module</span><p>Beginner-friendly practical lessons in office applications and everyday computer use.</p><button class="text-link" data-service="literacy">Explore service →</button></div></article>
+      <article class="service-card"><img loading="lazy" src="imgs/comp1.jpg" alt="Planning and reviewing work at a desk"><div class="service-body"><div class="service-icon">🧭</div><h3>Assignment & Project Guidance</h3><p>Understand requirements, plan your work, troubleshoot and improve your own projects.</p><button class="text-link" data-service="guidance">Explore service →</button></div></article>
+      <article class="service-card"><img loading="lazy" src="imgs/pos.avif" alt="Team collaborating on a software project"><div class="service-body"><div class="service-icon">🚀</div><h3>Custom Software Development</h3><p>Websites, mobile apps and systems planned around your organisation's requirements.</p><button class="text-link" data-service="custom">Explore service →</button></div></article>
+      <article class="service-card"><img loading="lazy" src="imgs/download.jpg" alt="Digital learning and online collaboration" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80'"><div class="service-body"><div class="service-icon">🌐</div><h3>Online & Physical Learning</h3><p>Choose a learning format that fits your location, schedule and learning goals.</p><button class="text-link" data-service="formats">Explore service →</button></div></article>
+    </div>
+    <div class="notice"><span>ℹ️</span><div><strong>Important clarification:</strong> We provide lessons, training support and skills development only; we do not issue certificates. Lessons suit learners enrolled with certificate-awarding institutions who need extra support, as well as anyone seeking practical knowledge or improved skills.</div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Projects & resources</span><h2>Explore practical project resources</h2><p>View sample project ideas and download the included starter files. Replace these examples with your own completed projects and resources.</p></div>
+    <div class="project-toolbar">
+      <p id="projectCount" aria-live="polite">Browse project downloads</p>
+      <div class="project-controls">
+        <button class="project-arrow" type="button" id="projectsPrev" aria-label="Previous projects">←</button>
+        <button class="project-arrow" type="button" id="projectsNext" aria-label="Next projects">→</button>
+      </div>
+    </div>
+    <div class="projects-viewport">
+      <div class="projects-grid" id="projectsGrid">
+        <article class="project"><div class="project-icon">🌐</div><h3>Hotel Management Website</h3><p>The website is a modern, responsive platform designed to showcase hotel accomodation, luxury rooms, resort facilities and hospitality services.</p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><div><a class="download-link" href="downloads/Magaya_Park_Resort.zip" download>↓ Download project files (.zip)</a></div></article>
+        <article class="project"><div class="project-icon">📒</div><h3>Student Records Management</h3><p>The system is a user friendly application designed to manage student information, class allocation, group work and computer assignments for practical lessons.
+          The system improves organization, simplifies record keeping and ensures efficient management of students and classroom activities.
+        </p><span class="tag">CSV</span><span class="tag">Spreadsheets</span><div><a class="download-link" href="downloads/student_management.zip" download>↓ Download project files (.zip)</a></div></article>
+        <article class="project"><div class="project-icon">🧠</div><h3>Student Attendance Security System</h3><p>The system manage attendance for the entire school from student check-in to dismissal. It uses facial recognition technology to record student attendance and verify parents or authorized gurdians when collecting children after school.</p><span class="tag">Planning</span><span class="tag">Documentation</span><div><a class="download-link" href="downloads/school_attendance.zip" download>↓ Download project files (.zip)</a></div></article>
+      
+      
+      </div>
+    </div>
+   
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="container about-grid">
+    <div class="about-art" aria-hidden="true">💡</div>
+    <div>
+      <div class="section-head"><span class="kicker" style="color:#80f0df">About us</span><h2>Practical learning. Personal guidance. Real progress.</h2><p>We help learners strengthen their understanding, practise digital skills and explore technology through guided learning and project support. We also work with individuals and organisations that need custom digital solutions.</p></div>
+      <div class="about-points"><div class="about-point"><b>01 / Learner-focused</b>Support shaped around your goals and current level.</div><div class="about-point"><b>02 / Practical approach</b>Learn by practising, solving problems and building.</div><div class="about-point"><b>03 / Flexible access</b>Online or physical lessons by arrangement.</div><div class="about-point"><b>04 / Clear expectations</b>Lessons and support only; no certificates issued.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head"><span class="kicker">Let's talk</span><h2>Ready to learn or build something?</h2><p>Tell us what you need and we'll help you identify the next step.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info"><h3>Contact details</h3><div class="contact-item"><span>📱</span><div><strong>WhatsApp / Phone</strong><a href="https://wa.me/263782381710" target="_blank" rel="noopener">+263 782 381 710</a></div></div><div class="contact-item"><span>🌍</span><div><strong>Learning formats</strong>Online and physical lessons</div></div><div class="contact-item"><span>📣</span><div><strong>Follow our WhatsApp channel</strong><a class="social-link" href="https://whatsapp.com/channel/0029VbBfgCL9RZAURFjKQF1g" target="_blank" rel="noopener">View channel ↗</a></div></div><div class="notice"><span>📌</span><div>Please include the service you are interested in and your preferred learning format when contacting us.</div></div></div>
+      <form class="contact-form" id="contactForm"><h3>Send an enquiry</h3><div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" placeholder="Your contact number"></div></div><div class="field"><label for="service">Service of interest</label><select id="service" name="service" required><option value="">Select a service</option><option>Computer Science Lessons</option><option>Web & Software Development Training</option><option>Computer Literacy & Digital Skills</option><option>Assignment & Project Guidance</option><option>Custom Software Development</option><option>Other enquiry</option></select></div><div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Tell us briefly what you want to learn or build..." required></textarea></div><button class="btn" type="submit">Send via WhatsApp ↗</button><p class="form-note">This form opens WhatsApp with your message prepared. It does not send your information to a server.</p></form>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="container footer-row"><div><strong>TECH SKILLS & SOLUTIONS</strong><br>Learn smart. Code better. Build your future.</div><div>© <span id="year"></span> Tech Skills & Solutions. All rights reserved.</div><a class="social-link" href="https://whatsapp.com/channel/0029VbBfgCL9RZAURFjKQF1g" target="_blank" rel="noopener">WhatsApp Channel ↗</a></div></footer>
+
+<div class="modal-backdrop" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><h2 id="modalTitle">Service details</h2><div id="modalContent"></div><a class="btn" id="modalContact" href="https://wa.me/263782381710" target="_blank" rel="noopener">Ask about this service ↗</a></div></div>
+<script>
+const serviceInfo={
+computer:{title:"Computer Science Lessons",intro:"Focused lessons and guided practice for learners who want to strengthen their understanding and confidence.",items:["Primary level: $10 per month","Secondary level: $15 per month","Tertiary level: $20 per month","Available online or physically by arrangement","Useful for revision, extra support and practical understanding"],note:"Lessons only; no certificates are issued."},
+development:{title:"Web & Software Development Training",intro:"Build your development knowledge step by step, from core concepts to practical projects.",items:["Discuss your current level and learning goals","Training may cover web technologies, programming and application concepts","Content and schedule are agreed before lessons begin"],note:"Fees depend on the agreed content outline."},
+literacy:{title:"Computer Literacy & Digital Skills",intro:"Practical computer lessons designed for beginners and anyone who wants to improve everyday digital skills.",items:["Microsoft Word","Microsoft Excel","Microsoft Access","Microsoft PowerPoint", "Microsoft Publisher", "File management, internet and other digital skills"],note:"$10 per module. Confirm the module and lesson plan before starting."},
+guidance:{title:"Assignment Help & Project Guidance",intro:"Support to help students understand requirements and develop their own work with confidence.",items:["Clarifying assignment or project requirements","Planning, research direction and task breakdown","Programming concepts and troubleshooting","Testing, reviewing and explaining your work"],note:"Fees vary according to the assignment or project requirements. Guidance supports learning and does not replace your own academic work."},
+custom:{title:"Custom Software Development",intro:"Digital solutions planned around the needs of individuals, schools, small businesses and organisations.",items:["Business or organisation websites","Mobile applications","Information management systems","Requirements discussion, planning and development"],note:"Fees depend on the features, scope and technical requirements."},
+formats:{title:"Online & Physical Learning",intro:"Choose a format that suits your location, timetable and learning preferences.",items:["Online lessons for flexible access","Physical lessons by arrangement","A learning plan based on your goals and current level","Contact us to discuss availability and scheduling"],note:"Lesson availability and location are confirmed when you enquire."}
+};
+document.querySelectorAll("[data-service]").forEach(btn=>btn.addEventListener("click",()=>{const s=serviceInfo[btn.dataset.service];document.getElementById("modalTitle").textContent=s.title;document.getElementById("modalContent").innerHTML=`<p>${s.intro}</p><ul>${s.items.map(x=>`<li>${x}</li>`).join("")}</ul><p><strong>${s.note}</strong></p>`;document.getElementById("serviceModal").classList.add("open");document.body.style.overflow="hidden"}));
+function closeModal(){document.getElementById("serviceModal").classList.remove("open");document.body.style.overflow=""}
+document.getElementById("modalClose").addEventListener("click",closeModal);
+document.getElementById("serviceModal").addEventListener("click",e=>{if(e.target.id==="serviceModal")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("in-view");observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll(".service-card").forEach((card,i)=>{card.style.transitionDelay=(i%3)*90+"ms";observer.observe(card)});
+const toggle=document.getElementById("menuToggle"),nav=document.getElementById("mainNav");
+toggle.addEventListener("click",()=>{const opened=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",opened?"true":"false");toggle.textContent=opened?"×":"☰"});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰"}));
+const sections=[...document.querySelectorAll("main section[id]")];const navLinks=[...nav.querySelectorAll("a")];
+const activeObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)navLinks.forEach(link=>link.classList.toggle("active",link.getAttribute("href")==="#"+entry.target.id))}),{rootMargin:"-35% 0px -55% 0px"});
+sections.forEach(s=>activeObserver.observe(s));
+const projectsGrid=document.getElementById("projectsGrid");
+const projectCards=[...projectsGrid.querySelectorAll(".project")];
+let projectIndex=0;
+function visibleProjectCount(){return window.matchMedia("(max-width:640px)").matches?1:window.matchMedia("(max-width:850px)").matches?2:3}
+function updateProjects(){
+  const visible=visibleProjectCount();
+  const maxIndex=Math.max(0,projectCards.length-visible);
+  projectIndex=Math.min(projectIndex,maxIndex);
+  const cardWidth=projectCards[0]?.getBoundingClientRect().width||0;
+  const gap=parseFloat(getComputedStyle(projectsGrid).gap)||0;
+  projectsGrid.style.transform=`translateX(-${projectIndex*(cardWidth+gap)}px)`;
+  document.getElementById("projectsPrev").disabled=projectIndex===0;
+  document.getElementById("projectsNext").disabled=projectIndex>=maxIndex;
+  document.getElementById("projectsPrev").style.opacity=projectIndex===0?".45":"1";
+  document.getElementById("projectsNext").style.opacity=projectIndex>=maxIndex?".45":"1";
+  document.getElementById("projectCount").textContent=projectCards.length?`Showing ${Math.min(projectIndex+1,projectCards.length)}–${Math.min(projectIndex+visible,projectCards.length)} of ${projectCards.length} projects`:"No projects added yet";
+}
+document.getElementById("projectsPrev").addEventListener("click",()=>{projectIndex=Math.max(0,projectIndex-1);updateProjects()});
+document.getElementById("projectsNext").addEventListener("click",()=>{projectIndex=Math.min(Math.max(0,projectCards.length-visibleProjectCount()),projectIndex+1);updateProjects()});
+window.addEventListener("resize",updateProjects);
+updateProjects();
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);const msg=`Hello, I would like to make an enquiry.%0AName: ${encodeURIComponent(f.get("name"))}%0APhone: ${encodeURIComponent(f.get("phone")||"Not provided")}%0AService: ${encodeURIComponent(f.get("service"))}%0AMessage: ${encodeURIComponent(f.get("message"))}`;window.open("https://wa.me/263782381710?text="+msg,"_blank","noopener")});
+</script>
+</body>
+</html>
